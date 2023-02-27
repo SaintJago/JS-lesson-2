@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 6</h1>
+    <p>
+      З клавіатури вводяться вартість товару та кількість одиниць 3 товарів.
+      Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек
+      (як у супермаркеті) використовуючи елементи розмітки. <br />
+    </p>
+    <script>
+      //1.Вводимо необхідні дані
+      let priceBread = parseFloat(prompt("Введіть вартість хліба", "0"));
+      let quantityBread = parseFloat(
+        prompt("Введіть кількість одиниць хліба", "0")
+      );
+      let priceMilk = parseFloat(prompt("Введіть вартість молока", "0"));
+      let quantityMilk = parseFloat(
+        prompt("Введіть кількість одиниць молока", "0")
+      );
+      let priceCheese = parseFloat(prompt("Введіть вартість сира", "0"));
+      let quantityCheese = parseFloat(
+        prompt("Введіть кількість одиниць сира", "0")
+      );
+      //2.Знаходимо результат
+      let totalCostBread = priceBread * quantityBread;
+      let totalCostMilk = priceMilk * quantityMilk;
+      let totalCostCheese = priceCheese * quantityCheese;
+      let totalCostUnits = totalCostBread + totalCostMilk + totalCostCheese;
+      //3.Виводимо результат
+      document.write(`<table border= 2px>
+          <tr>
+            <th>Товар:</th>
+            <th>Хліб</th>
+            <th>Молоко</th>
+            <th>Сир</th>
+            <th>Загальна вартість: </th>
+          </tr>
+          <tr>
+            <td>Вартість:</td>    
+            <td>${priceBread}</td>
+            <td>${priceMilk}</td>
+            <td>${priceCheese}</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Кількість:</td>    
+            <td>${quantityBread}</td>
+            <td>${quantityMilk}</td>
+            <td>${quantityCheese}</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Сума:</td>    
+            <td>${totalCostBread}</td>
+            <td>${totalCostMilk}</td>
+            <td>${totalCostCheese}</td>
+            <td>${totalCostUnits}</td>
+          </tr>
+                <table>`);
+    </script>
+  </body>
+</html>
